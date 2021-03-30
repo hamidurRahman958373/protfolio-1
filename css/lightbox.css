@@ -1,0 +1,141 @@
+/**/
+.lighbtbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    /*display: -ms-flexbox;
+    -ms-flex-align: center;*/
+    display: none !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    -ms-flex-pack: center;
+    cursor: zoom-out;
+    padding: 30px;
+}
+
+.lighbtbox .open {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.lighbtbox .lightbox-content img {
+    height: auto;
+    width: auto;
+    max-height: 430px;
+    max-width: 100%;
+    cursor: pointer;
+
+}
+
+.lighbtbox .lightbox-content {
+    position: relative;
+    /*-webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;*/
+
+}
+
+.lighbtbox .open .lightbox-content {
+    animation: lightboxImage 0.5s ease;
+}
+
+@-webkit-keyframes lightboxImag {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes lightboxImag {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.lighbtbox .lightbox-content .lightbox-caption {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+
+}
+
+.lighbtbox .lightbox-content .lightbox-close {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -40px;
+    right: 0;
+    font-size: 32px;
+    text-align: right;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+.lighbtbox .lightbox-control .prev-item,
+.lighbtbox .lightbox-control .next-item {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: seashell;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 110;
+    -webkit-transition: all 0.3s ease;
+    transition: translateX(0px);
+
+}
+
+.lighbtbox .lightbox-control .prev-item:active,
+.lighbtbox .lightbox-control .next-item:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.lighbtbox .lightbox-control .prev-item {
+    left: 30px;
+}
+
+.lighbtbox .lightbox-control .next-item {
+    right: 30px;
+}
+
+.lighbtbox .lightbox-control .prev-item .fa,
+.lighbtbox .lightbox-control .next-item .fa {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.lighbtbox .lightbox-control .prev-item .fa,
+.lighbtbox .lightbox-control .next-item .fa {
+    color: #ec1839;
+}
+
+/**/
